@@ -1,128 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* root */
 :root {
-    --color-gray-dark: #797979;
-    --color-gray-light: #d9d9d9;
-    --color-blue: #1c5cff;
-    --color-white: #ffffff;
-    --color-border-light: #dadada;
-    --color-gray-body: #efefef;
-    --color-blue-light: #3d74ff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: var(--color-gray-body);
-  }
-  
-  #Coranu-color {
-    color: #1e1e1e;
-  }
-  
+  --color-gray-dark: #797979;
+  --color-gray-light: #d9d9d9;
+  --color-blue: #1c5cff;
+  --color-white: #ffffff;
+  --color-border-light: #dadada;
+  --color-gray-body: #efefef;
+  --color-blue-light: #3d74ff;
+}
+
+
+
+body {
+  background: var(--color-gray-body);
+}
+
+#Coranu-color {
+  color: #1e1e1e;
+}
+
+.custom-input {
+  border: 1.06px solid var(--color-border-light);
+  background: var(--color-white);
+  border-radius: 40px;
+  padding-left: 40px;
+  padding-right: 70px;
+}
+
+#custom-hiring {
+  background: var(--color-blue);
+}
+
+#custom-arrow-color {
+  background: var(--color-blue-light);
+  padding: 1.5px 5px;
+  border-radius: 2px;
+}
+
+#login-register-button {
+  background: var(--color-blue);
+  border: none;
+  color: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.main-content {
+  background: var(--color-white);
+  height: auto;
+}
+
+/* Add responsive styling for mobile and small screens */
+@media (max-width: 767px) {
+
+  /* Make the search input and button take full width on smaller screens */
   .custom-input {
-    border: 1.06px solid var(--color-border-light);
-    background: var(--color-white);
-    border-radius: 40px;
+    width: 100%;
     padding-left: 40px;
-    padding-right: 70px;
+    padding-right: 40px;
   }
-  
-  #custom-hiring-color {
-    background: var(--color-blue);
+
+  /* Adjust button sizes */
+  #login-register-button {
+    padding: 5px 8px;
   }
-  
+
   #custom-arrow-color {
-    background: var(--color-blue-light);
-    padding: 1.5px 5px;
-    border-radius: 2px;
+    padding: 1px 3px;
   }
-  
-  #login-register-button {
-    background: var(--color-blue);
-    border: none;
-    color: var(--color-white);
-    padding: 5px 10px;
-    border-radius: 4px;
+
+  .navbar-toggler {
+    margin-left: auto;
   }
-  
-  .main-content {
-    background: var(--color-white);
-    height: auto;
+
+  .navbar-collapse {
+    text-align: center;
   }
-  /* Add responsive styling for mobile and small screens */
-  @media (max-width: 767px) {
-    /* Make the search input and button take full width on smaller screens */
-    .custom-input {
-      width: 100%;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  
-    /* Adjust button sizes */
-    #login-register-button {
-      padding: 5px 8px;
-    }
-  
-    #custom-arrow-color {
-      padding: 1px 3px;
-    }
-  
-    .navbar-toggler {
-      margin-left: auto;
-    }
-  
-    .navbar-collapse {
-      text-align: center;
-    }
+}
+
+
+
+
+
+
+
+
+
+/* .....................media query........................................................................ */
+
+@media (max-width: 576px) {
+
+  /* Ensure logo, search bar, and button stack on very small screens */
+  .navbar-brand {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
   }
-  
-  @media (max-width: 576px) {
-    /* Ensure logo, search bar, and button stack on very small screens */
-    .navbar-brand {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-  
-    .btn-custom {
-      width: 100%;
-      margin-top: 10px;
-    }
+
+  .btn-custom {
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  #colors-paragraph {
-    color: var(--color-gray-dark);
-  }
-  .blog-topics-color {
-    color: var(--color-blue);
-  }
-  
-  .blog-topics-paragraphs {
-    color: #1e1e1e;
-  }
-  
-  .gray-dark {
-    color: var(--color-gray-dark);
-    border: 0.82px solid #c9c9c9;
-    background: #ffffff;
-  }
-  #blogs-paragraph {
-    color: #7d7d7d;
-  }
-  
-  #login-register-button {
-    text-decoration: none;
-  }
-  /* Add transition to posts */
-  .displayPost {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-  }
-  
-  .displayPost[style*="display: none"] {
-    opacity: 0;
-    display: none !important;
-  }
+}
+
+#colors-paragraph {
+  color: var(--color-gray-dark);
+}
+
+.blog-topics-color {
+  color: var(--color-blue);
+}
+
+.blog-topics-paragraphs {
+  color: #1e1e1e;
+}
+
+.gray-dark {
+  color: var(--color-gray-dark);
+  border: 0.82px solid #c9c9c9;
+  background: #ffffff;
+}
+
+#blogs-paragraph {
+  color: #7d7d7d;
+}
+
+#login-register-button {
+  text-decoration: none;
+}
+
+/* Add transition to posts */
+.displayPost {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.displayPost[style*="display: none"] {
+  opacity: 0;
+  display: none !important;
+}

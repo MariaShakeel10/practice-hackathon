@@ -1,5 +1,8 @@
 import{
-    auth, getAuth,onAuthStateChanged,signInWithEmailAndPassword
+    auth, 
+    getAuth,
+    onAuthStateChanged,
+    signInWithEmailAndPassword
  } from "./firebase.js"
 
  onAuthStateChanged(auth, (user) => {
@@ -57,3 +60,5 @@ import{
             darkmode = localStorage.getItem('darkmode')
             darkmode !== "active" ? enableDarkmode() : disableDarkmode()
         })
+
+      

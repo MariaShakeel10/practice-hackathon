@@ -1,15 +1,21 @@
 import {
-    auth, getAuth, createUserWithEmailAndPassword, onAuthStateChanged,signInWithPopup,GoogleAuthProvider,provider
+    auth,
+    getAuth,
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    signInWithPopup,
+    GoogleAuthProvider,
+    provider
 } from "./firebase.js"
 let email = document.getElementById("email")
 
 // signUp
 const signUp = document.getElementById("signUp")
 
-signUp.addEventListener('click',(e)=>{
+signUp.addEventListener('click', (e) => {
     let email = document.getElementById("email").value
     let password = document.getElementById("password").value
-    let name=document.getElementById("name").value
+    let name = document.getElementById("name").value
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed up 
@@ -54,28 +60,27 @@ google.addEventListener("click", (e) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             console.error("Error during sign-in:", errorMessage);
-            Swal.fire("Error signing in" );
+            Swal.fire("Error signing in");
         });
 });
 
 // .......................................theme...
 let darkmode = localStorage.getItem('darkmode')
-        const themeSwitch = document.getElementById('theme-switch')
+const themeSwitch = document.getElementById('theme-switch')
 
-        const enableDarkmode = () => {
-            document.body.classList.add('darkmode')
-            localStorage.setItem('darkmode', 'active')
-        }
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
 
-        const disableDarkmode = () => {
-            document.body.classList.remove('darkmode')
-            localStorage.setItem('darkmode', '')
-        }
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', '')
+}
 
-        if (darkmode === "active") enableDarkmode()
+if (darkmode === "active") enableDarkmode()
 
-        themeSwitch.addEventListener("click", () => {
-            darkmode = localStorage.getItem('darkmode')
-            darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-        })
-        
+themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
