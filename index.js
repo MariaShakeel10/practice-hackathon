@@ -88,7 +88,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// Create a new post
+// ..............................................Create a new post.......................................................
 createPostForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
